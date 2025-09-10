@@ -16,7 +16,7 @@ See the [Vite Configuration Reference](https://vite.dev/config/).
 
 ### Clone the Repository
 ```sh
-git clone https://github.com/3zden/RecruitMe
+git clone https://github.com/3zden/RecruitMe.git
 ```
 ```
 cd RecruitMe
