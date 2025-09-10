@@ -24,7 +24,7 @@ const toggleDescription = () => {
 
 <template>
   <!-- Job Listing 1 -->
-  <div class="bg-white rounded-xl shadow-md relative">
+  <div class="bg-[#FCFFEC] rounded-3xl shadow-md relative">
     <div class="p-4">
       <div class="mb-6">
         <div class="text-gray-600 my-2">{{ job.type }}</div>
@@ -34,13 +34,13 @@ const toggleDescription = () => {
       <div class="mb-5">
         {{ lessDescription }}
         <button @click="toggleDescription">
-          <a class="text-green-400 hover:text-green-700">{{
+          <a class="text-[#2B3A1F] text-sm hover:text-[#1B1E17]/80">{{
             fullDescription ? 'see less' : 'see more'
           }}</a>
         </button>
       </div>
 
-      <h3 class="text-green-500 mb-2">{{ job.salary }} / Year</h3>
+      <h3 class="text-[#1B1E17] mb-2">{{ job.salary }} / Year</h3>
 
       <div class="border border-gray-100 mb-5"></div>
 
@@ -50,7 +50,7 @@ const toggleDescription = () => {
           {{ job.location }}
         </div>
         <router-link :to="'/job/' + job.id"
-          class="h-[36px] bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-center text-sm">
+          class="h-[36px] bg-[#1B1E17] hover:bg-[#1B1E17]/80 text-white px-4 py-2 rounded-lg text-center text-sm">
           Read More
         </router-link>
       </div>

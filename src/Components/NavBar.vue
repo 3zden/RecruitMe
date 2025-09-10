@@ -1,5 +1,5 @@
 <script setup>
-import logo from '../assets/logo.png';
+import whiteLogo from '../assets/whiteLogo.png';
 import { defineProps } from "vue";
 import { RouterLink,useRoute } from "vue-router";
 
@@ -21,7 +21,7 @@ const isActive = (routePath) => {
 </script>
 
 <template>
-<nav class="bg-green-700 border-b border-green-500">
+<nav class="">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="flex h-20 items-center justify-between">
           <div
@@ -29,7 +29,7 @@ const isActive = (routePath) => {
           >
             <!-- Logo -->
             <RouterLink class="flex flex-shrink-0 items-center mr-4" to="/">
-              <img class="h-10 w-auto" :src="logo" alt="Vue Jobs" />
+              <img class="h-10 w-auto " :src="whiteLogo" alt="RecruitMe Logo" />
               <span class="hidden md:block text-white text-2xl font-bold ml-2"
                 >{{ title  }}</span
               >
@@ -38,16 +38,16 @@ const isActive = (routePath) => {
               <div class="flex space-x-2">
                 <router-link
                   to="/"
-                  :class="[isActive('/') ? 'bg-green-900 hover:bg-gray-900' : 'bg-green-700 hover:bg-green-900' , 'text-white', 'hover:text-white', 'rounded-md', 'px-3', 'py-2']" 
+                  :class="[isActive('/') ? 'bg-[#b8c296]/10 hover:bg-[#b8c296]/20' : ' hover:bg-[#b8c296]/20' , 'text-white', 'hover:text-white', 'rounded-3xl', 'px-3', 'py-2']" 
                   >Home</router-link
                 >
                 <router-link to='/jobs'
-                  :class="[isActive('/jobs') ? 'bg-green-900 hover:bg-gray-900' : 'bg-green-700 hover:bg-green-900' , 'text-white', 'hover:text-white', 'rounded-md', 'px-3', 'py-2']"
+                  :class="[isActive('/jobs') ? 'bg-[#b8c296]/10 hover:bg-[#b8c296]/20' :  'hover:bg-[#b8c296]/20' , 'text-white', 'hover:text-white', 'rounded-3xl', 'px-3', 'py-2']"
                   >Jobs</router-link
                 >
                 <router-link
                   to="/add-jobs"
-                  :class="[isActive('/add-jobs') ? 'bg-green-900 hover:bg-gray-900' : 'bg-green-700 hover:bg-green-900' , 'text-white', 'hover:text-white', 'rounded-md', 'px-3', 'py-2']"
+                  :class="[isActive('/add-jobs') ? 'bg-[#b8c296]/10 hover:bg-[#b8c296]/20' : ' hover:bg-[#b8c296]/20' , 'text-white', 'hover:text-white', 'rounded-3xl', 'px-3', 'py-2']"
                   >Add Job</router-link
                 >
               </div>
@@ -60,5 +60,9 @@ const isActive = (routePath) => {
 
 <style scoped>
 background-color: red;
+/* Add this to your <style scoped> */
+.white-logo {
+  filter: brightness(0) invert(1);
+}
    
 </style>

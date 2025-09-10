@@ -37,13 +37,13 @@ async function insertNewJob(){
 
 
 <template>
-    <section class="bg-green-50">
+    <section class="">
       <div class="container m-auto max-w-2xl py-24">
         <div
-          class="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0"
+          class="bg-white px-6 py-8 mb-4 shadow-md rounded-3xl border m-4 md:m-0"
         >
           <form>
-            <h2 class="text-3xl text-center font-semibold mb-6">Add Job</h2>
+            <h2 class="text-[#788F5D] text-3xl text-center font-semibold mb-6">Add Job</h2>
 
             <div class="mb-4">
               <label for="type" class="block text-gray-700 font-bold mb-2"
@@ -202,7 +202,7 @@ async function insertNewJob(){
             <div>
               <button
                 @click.prevent="insertNewJob"
-                class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
+                class="bg-[#788F5D] hover:bg-[#788F5D]/80 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
                 type="submit"
               >
                 Add Job

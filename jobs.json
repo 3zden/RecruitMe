@@ -111,6 +111,20 @@
         "contactEmail": "eee@gm",
         "contactPhone": "ee"
       }
+    },
+    {
+      "id": "",
+      "type": "Remote",
+      "title": "",
+      "description": "",
+      "salary": "$80K - $90K",
+      "location": "",
+      "company": {
+        "name": "",
+        "description": "",
+        "contactEmail": "",
+        "contactPhone": ""
+      }
     }
   ]
 }

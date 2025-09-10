@@ -11,7 +11,7 @@ defineProps({
 
 
 <template>
-    <div :class="`${bg} p-6 rounded-lg shadow-md`">
+    <div :class="`${bg} p-6 rounded-3xl shadow-md`">
          
          <slot></slot>
          <slot name="button"></slot>

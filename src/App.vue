@@ -16,4 +16,7 @@ import {RouterView} from "vue-router"
 </template>
 
 <style scoped>
+body {
+  background-image: '@/assets/Background.png';
+}
 </style>
