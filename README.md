@@ -3,7 +3,7 @@
 
 ![thumbnail](src/assets/Thumbnail.png)
 
-mor3zdenAI is an AI-powered chatbot application that provides information and answers questions about me through natural language processing and machine learning, making it easy to find information as if chatting with a friend.
+A modern job board platform built with Vue.js, Tailwind CSS, and Vite with a professional modern UI design that's clean and responsive for both job seekers and employers.
 
 
 ## Recommended IDE Setup
