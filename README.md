@@ -1,6 +1,10 @@
 # RecruitMe
 
 
+![thumbnail](src/assets/Thumbnail.png)
+
+mor3zdenAI is an AI-powered chatbot application that provides information and answers questions about me through natural language processing and machine learning, making it easy to find information as if chatting with a friend.
+
 
 ## Recommended IDE Setup
 
