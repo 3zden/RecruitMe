@@ -5,7 +5,7 @@ import { ref, defineProps, computed } from 'vue'
 const { job } = defineProps({
   job: Object,
 });
-const fullDescription = ref(true);
+const fullDescription = ref(false);
 
 
 const lessDescription = computed(() => {

@@ -1,4 +1,39 @@
-<script setup></script>
+<script setup>
+import { reactive } from "vue";
+import axios from "axios";
+
+
+const job = reactive({
+  type: "Remote",
+  title: "",
+  description:"",
+  salary: "$80K - $90K",
+  location: "",
+  company: {
+        name: "",
+        description: "",
+        contactEmail: "",
+        contactPhone: ""
+      },
+  id: "",
+});
+
+function checkType(){
+  console.log(job);
+
+}
+
+async function insertNewJob(){
+  try {
+    const response = await axios.post('http://localhost:5000/jobs', job);
+    console.log('Job added:', response.data);
+  } catch (error) {
+    console.error('Error adding job:', error);
+  }
+
+}
+
+</script>
 
 
 <template>
@@ -19,11 +54,13 @@
                 name="type"
                 class="border rounded w-full py-2 px-3"
                 required
+                v-model="job.type"
+                @change="checkType"
               >
-                <option value="Full-Time">Full-Time</option>
-                <option value="Part-Time">Part-Time</option>
-                <option value="Remote">Remote</option>
-                <option value="Internship">Internship</option>
+                <option value="Full-Time" >Full-Time</option>
+                <option value="Part-Time" >Part-Time</option>
+                <option value="Remote" >Remote</option>
+                <option value="Internship" >Internship</option>
               </select>
             </div>
 
@@ -32,6 +69,8 @@
                 >Job Listing Name</label
               >
               <input
+                
+                v-model="job.title"
                 type="text"
                 id="name"
                 name="name"
@@ -47,6 +86,7 @@
                 >Description</label
               >
               <textarea
+                v-model="job.description"
                 id="description"
                 name="description"
                 class="border rounded w-full py-2 px-3"
@@ -60,6 +100,7 @@
                 >Salary</label
               >
               <select
+                v-model="job.salary"
                 id="salary"
                 name="salary"
                 class="border rounded w-full py-2 px-3"
@@ -84,6 +125,7 @@
                 Location
               </label>
               <input
+                v-model="job.location"
                 type="text"
                 id="location"
                 name="location"
@@ -100,6 +142,7 @@
                 >Company Name</label
               >
               <input
+                v-model="job.company.name"
                 type="text"
                 id="company"
                 name="company"
@@ -115,6 +158,7 @@
                 >Company Description</label
               >
               <textarea
+                v-model="job.company.description"
                 id="company_description"
                 name="company_description"
                 class="border rounded w-full py-2 px-3"
@@ -130,6 +174,7 @@
                 >Contact Email</label
               >
               <input
+                v-model="job.company.contactEmail"
                 type="email"
                 id="contact_email"
                 name="contact_email"
@@ -145,6 +190,7 @@
                 >Contact Phone</label
               >
               <input
+                v-model="job.company.contactPhone"
                 type="tel"
                 id="contact_phone"
                 name="contact_phone"
@@ -155,6 +201,7 @@
 
             <div>
               <button
+                @click.prevent="insertNewJob"
                 class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
                 type="submit"
               >

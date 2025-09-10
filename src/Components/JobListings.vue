@@ -1,12 +1,23 @@
 <script setup>
-import { ref, defineProps} from "vue";
-import jobsData from "@/assets/jobs.json";
+import { ref, defineProps, onMounted} from "vue";
 import joblisting from "./joblisting.vue";
+import axios from "axios";
 
 
 
-const jobs = ref(jobsData);
-console.log(jobs.value[0]);
+
+
+const jobs = ref([]);
+
+onMounted(async () => {
+  try {
+    const response = await axios.get('http://localhost:5000/jobs');
+    jobs.value = response.data;
+  } catch (error) {
+    console.error('Error fetching jobs:', error);
+  }
+})
+
 
 
 defineProps({
