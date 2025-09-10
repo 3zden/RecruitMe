@@ -1,32 +1,39 @@
 # RecruitMe
 
-
 ![thumbnail](src/assets/Thumbnail.png)
 
-A modern job board platform built with Vue.js, Tailwind CSS, and Vite with a professional modern UI design that's clean and responsive for both job seekers and employers.
-
+RecruitMe is a modern, responsive job board platform built with Vue.js, Tailwind CSS, and Vite, featuring a clean and professional UI design for job seekers and employers.
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+VSCode + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (disable Vetur).
 
-## Customize configuration
+## Configuration
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+See the [Vite Configuration Reference](https://vite.dev/config/).
 
 ## Project Setup
 
+### Clone the Repository
+```sh
+git clone https://github.com/3zden/RecruitMe
+```
+```
+cd RecruitMe
+```
+
+### Install Dependencies
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Development
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Production Build
 
 ```sh
 npm run build
