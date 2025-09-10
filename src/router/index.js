@@ -4,7 +4,7 @@ import HomeView from "../views/HomeView.vue"
 import JobsView from "../views/JobsView.vue"
 import AddJobsView from "@/views/AddJobView.vue"
 import NotFoundView from "@/views/NotFoundView.vue";
-import JobView from "../views/JobView.vue";
+import JobView from "../views/jobView.vue";
 
 
 
